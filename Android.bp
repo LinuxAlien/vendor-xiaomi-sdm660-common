@@ -1,6 +1,7 @@
 /**
  * Copyright (C) 2019-2021 The LineageOS Project
  * Copyright (C) 2020-2021 The Project-Awaken
+ * Copyright (C) 2021 Paranoid Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -133,10 +134,32 @@ android_app_import {
 }
 
 android_app_import {
+	name: "SSGTelemetryService",
+	owner: "xiaomi",
+	apk: "proprietary/vendor/app/SSGTelemetryService/SSGTelemetryService.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
 	name: "TimeService",
 	owner: "xiaomi",
 	apk: "proprietary/vendor/app/TimeService/TimeService.apk",
 	certificate: "platform",
+	dex_preopt: {
+		enabled: false,
+	},
+	soc_specific: true,
+}
+
+android_app_import {
+	name: "TrustZoneAccessService",
+	owner: "xiaomi",
+	apk: "proprietary/vendor/app/TrustZoneAccessService/TrustZoneAccessService.apk",
+	presigned: true,
 	dex_preopt: {
 		enabled: false,
 	},
@@ -440,9 +463,9 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-	name: "vendor.qti.gnss@3.0-service",
+	name: "vendor.qti.gnss@4.0-service",
 	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml",
+	src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
