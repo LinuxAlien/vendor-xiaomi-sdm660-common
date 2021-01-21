@@ -342,6 +342,13 @@ dex_import {
 }
 
 dex_import {
+	name: "com.qualcomm.qti.uceservice-V2.2-java",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/com.qualcomm.qti.uceservice-V2.2-java.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
 	name: "dpmapi",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/dpmapi.jar"],
